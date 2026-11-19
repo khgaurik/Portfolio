@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Gaurik Khullar</title>
+  <meta name="description"
+    content="ePortfolio of Gaurik Khullar, a Computer Science student at Mount Royal University looking for a co-op.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">Gaurik Khullar</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="journey.html">My Journey</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="education.html">Education &amp; Awards</a>
+      <a href="experience.html">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>Projects</h1>
+      <p>Software I&rsquo;ve built, from solo endevours to group explorations.</p>
+    </section>
+
+    <section>
+      <!-- To add a project, copy one <article> block and paste it below the last one -->
+      <div class="cards">
+        <article class="card">
+          <h3>Chuck: The Game</h3>
+          <p class="tech">ANSI C, Assembly, Atari ST</p>
+          <p>A 2D platformer for the Atari ST, built from scratch by a team of three in three months. I led the team and
+            owned the timeline and system architecture.</p>
+          <ul>
+            <li>Wrote a custom raster graphics library in ANSI C and Assembly</li>
+            <li>Implemented interrupt service routines and a custom clock for real-time play</li>
+            <li>Programmed Pulse-Code Modulation audio drivers for sound effects</li>
+          </ul>
+          <a class="link" href="https://github.com/M-Valdy/COMP2659-ChuckYin.git">View on GitHub</a>
+        </article>
+
+        <article class="card">
+          <h3>AlfredAI</h3>
+          <p class="tech">HTML5, CSS3, JavaScript, Gemini API, Firebase</p>
+          <p>A web app that guides students through academic problem-solving with guided feedback instead of direct
+            answers. Built by a team of three in a one-month Agile cycle.</p>
+          <ul>
+            <li>Led weekly check-ins and iterative sprints</li>
+            <li>Designed and built the user interface</li>
+            <li>Integrated Firebase and the Google Gemini API</li>
+          </ul>
+          <a class="link" href="https://github.com/khgaurik/AlfredAI.git">View on GitHub</a>
+        </article>
+
+        <article class="card">
+          <h3>Mathematics Engine</h3>
+          <p class="tech">Java</p>
+          <p>A mathematics engine in planning and early development, built to support my research and
+            explorations of machines and to serve as a base for my larger projects in the future.
+            I&rsquo;m currently working on the initial design and logic for arithmetic and logic operations.</p>
+          <ul>
+            <li>Cuts down my reliance on commercial resources for mathematics</li>
+            <li>Reinforces my own knowledge of mathematics as I build it</li>
+            <li>Gives me hands-on practice with new frameworks and tools along the way</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> Gaurik Khullar. Calgary, Alberta.</footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

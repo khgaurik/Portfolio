@@ -1,0 +1,478 @@
+/* ---------- Colors and fonts: change them here ---------- */
+:root {
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --ink: #14161a;
+  --muted: #5a6068;
+  --line: #dde0e5;
+  --navy: #1d2b4f;
+  --navy-dark: #141f3a;
+  --burgundy: #7b1e2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.65 Nunito, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--navy);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 3px;
+}
+
+/* ---------- Header and nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .9rem 1.5rem;
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--navy);
+}
+
+nav {
+  display: flex;
+  gap: 1.3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .95rem;
+  padding: .2rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: var(--navy);
+}
+
+nav a[aria-current="page"] {
+  color: var(--navy);
+  border-bottom-color: var(--burgundy);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--navy);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: none;
+  text-align: center;
+  padding: 7.5rem 1.5rem 6.5rem;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: #fff;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2.6rem, 9vw, 5rem);
+  letter-spacing: .04em;
+}
+
+.tagline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #dfe3ec;
+  margin: 1.2rem 0 .4rem;
+}
+
+.sub {
+  color: #aab2c4;
+  margin: 0 0 2rem;
+}
+
+.hero .btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero .btn.filled {
+  background: #fff;
+  color: var(--navy);
+}
+
+.hero .btn:hover {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+  color: #fff;
+}
+
+/* ---------- Buttons ---------- */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: .7rem 1.6rem;
+  border: 1.5px solid var(--navy);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.btn.filled {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn:hover {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+  color: #fff;
+}
+
+/* ---------- Sections ---------- */
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
+}
+
+section h2 {
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  margin-bottom: 2rem;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--burgundy);
+  margin-top: .7rem;
+}
+
+#contact,
+.teaser {
+  text-align: center;
+}
+
+#contact h2::after,
+.teaser h2::after {
+  margin-inline: auto;
+}
+
+.teaser {
+  background: var(--surface);
+  max-width: none;
+}
+
+.teaser p {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+}
+
+.center {
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+}
+
+/* Project cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.tech {
+  color: var(--burgundy);
+  font-weight: 700;
+  margin: .3rem 0 1rem;
+  font-size: .95rem;
+}
+
+.card ul {
+  color: var(--muted);
+  padding-left: 1.2rem;
+}
+
+.link {
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about p {
+  margin: 0 0 1rem;
+}
+
+.avatar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--navy);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  font: 700 3rem "Playfair Display", Georgia, serif;
+  color: var(--navy);
+  background: var(--surface);
+}
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+/* ---------- Inner pages ---------- */
+.page-head {
+  max-width: none;
+  text-align: center;
+  padding: 4.5rem 1.5rem 3.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-head h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+}
+
+.page-head p {
+  color: var(--muted);
+  margin: .8rem auto 0;
+  max-width: 36rem;
+}
+
+.page-head+section {
+  padding-top: 3rem;
+}
+
+/* Education and experience entries */
+.entry {
+  border-left: 3px solid var(--burgundy);
+  padding: .2rem 0 .2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.entry h3 {
+  font-size: 1.35rem;
+}
+
+.entry .org {
+  margin: .3rem 0 0;
+  font-weight: 700;
+}
+
+.entry .when {
+  margin: .1rem 0 .8rem;
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
+.entry ul {
+  color: var(--muted);
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.entry p:last-child {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Journey timeline ---------- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid var(--line);
+}
+
+.stop {
+  position: relative;
+  margin-bottom: 2.5rem;
+  max-width: 46rem;
+}
+
+.stop::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem - 8px);
+  top: .35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--navy);
+}
+
+.stop .when {
+  margin: 0 0 .3rem;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: .95rem;
+}
+
+.stop h3 {
+  font-size: 1.5rem;
+  margin-bottom: .6rem;
+}
+
+.stop p {
+  margin: 0 0 .8rem;
+}
+
+.stop .goal {
+  color: var(--navy);
+}
+
+.stop ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.stop.current {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--burgundy);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.2rem;
+}
+
+.stop.current::before {
+  background: var(--burgundy);
+  box-shadow: 0 0 0 2px var(--burgundy);
+  left: calc(-2rem - 8px);
+  top: 1.7rem;
+}
+
+.stop.future::before {
+  background: var(--bg);
+  box-shadow: 0 0 0 2px var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  margin-left: .6rem;
+  padding: .05rem .7rem;
+  border-radius: 999px;
+  background: var(--burgundy);
+  color: #fff;
+  font-size: .8rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--navy-dark);
+  color: #aab2c4;
+  font-size: .85rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: .9rem 1.5rem;
+    border-bottom: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  nav a[aria-current="page"] {
+    background: var(--surface);
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .hero {
+    padding: 5rem 1.2rem 4rem;
+  }
+}
